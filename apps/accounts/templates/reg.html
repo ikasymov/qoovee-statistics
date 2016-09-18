@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% block header %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Регистрация</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    <form class="form-signin" method="POST">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">Регистрация</h2>
+        <label for="inputPassword" class="sr-only">Username</label>
+         <div class="form-item">
+            <div class="form-item-title">Логин</div>
+            <div class="form-item-input"> {{ form.username | attr:"class:form-control" }}</div>
+        </div>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <div class="form-item">
+            <div class="form-item-title">Пароль</div>
+            <div class="form-item-input"> {{ form.password | attr:"class:form-control" }}</div>
+        </div>
+         {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+        <div class="form-item">
+            <div class="form-item-title">Пароль еще раз</div>
+            <div class="form-item-input"> <input type="password" name="password2" class="form-control"></div>
+        </div>
+       <div class="form-item">
+        
+            <select name="select">
+                {% for i in depart %}
+                <option class="form-control" value="{{ i.id }}"> {{ i.name }} </option>
+                {% endfor %}
+                
+            </select>
+
+        <label for="inputEmail" class="sr-only">Phone</label>
+       <div class="form-item">
+            <div class="form-item-title">Номер</div>
+            <div class="form-item-input"> <input type="number" name="phone" class="form-control"></div>
+        </div>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <div class="form-item">
+            <div class="form-item-title">Электронная почта</div>
+            <div class="form-item-input">{{ form.email | attr:"class:form-control" }} </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Registration</button>
+      </form>
+    </div> 
+  </body>
+</html>
+{% endblock %}

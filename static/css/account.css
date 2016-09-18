@@ -1,0 +1,435 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.reg-form-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #616161;
+}
+
+header {
+  height: 55px;
+  background: #2196f3;
+}
+
+header .logo {
+  padding-top: 1.2%;
+}
+
+.form-block, .registration-form-block {
+  text-align: center;
+  padding: 15px 0 ;
+}
+
+.form-block .form-wrap, .registration-form-block .form-wrap {
+  text-align: left;
+  display: inline-block;
+  background: #f4f5f5;
+  padding: 2%;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(200, 200, 200, 0.6);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(200, 200, 200, 0.6);
+  box-shadow: 0px 0px 20px 0px rgba(200, 200, 200, 0.6);
+}
+
+.form-block .form-wrap .enter-link, .registration-form-block .form-wrap .enter-link {
+  color: #64b5f6;
+}
+
+.form-block .form-wrap .enter-link a, .registration-form-block .form-wrap .enter-link a {
+  color: inherit;
+}
+
+.form-block .form-wrap .avatar, .registration-form-block .form-wrap .avatar {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.form-block .form-wrap .avatar img, .registration-form-block .form-wrap .avatar img {
+  width: 70px;
+  height: 70px;
+}
+
+.form-block .form-wrap .form, .registration-form-block .form-wrap .form {
+  padding: 10% 0 0;
+}
+
+.form-block .form-wrap .form .input-wrap, .registration-form-block .form-wrap .form .input-wrap {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.form-block .form-wrap .form .input-wrap input, .registration-form-block .form-wrap .form .input-wrap input {
+  width: 100%;
+  border: 0;
+  padding: 4%;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  outline: none;
+}
+
+.form-block .form-wrap .form .input-wrap input.submit-button, .registration-form-block .form-wrap .form .input-wrap input.submit-button {
+  background: #2196f3;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: medium;
+  transition: .2s ease-in;
+  -moz-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  -webkit-transition: .2s ease-in;
+}
+
+.form-block .form-wrap .form .input-wrap input.submit-button:hover, .registration-form-block .form-wrap .form .input-wrap input.submit-button:hover {
+  background: #4faaf3;
+  transition: .2s ease-in;
+  -moz-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  -webkit-transition: .2s ease-in;
+}
+
+.form-block .form-wrap .form .more, .registration-form-block .form-wrap .form .more {
+  text-align: center;
+  padding: 0 15%;
+}
+
+.form-block .form-wrap .form .more.forgot-password, .registration-form-block .form-wrap .form .more.forgot-password {
+  padding: 0;
+  text-align: right;
+}
+
+.form-block .form-wrap .form .more.forgot-password a, .registration-form-block .form-wrap .form .more.forgot-password a {
+  color: grey;
+}
+
+.form-block .form-wrap .form .submit, .registration-form-block .form-wrap .form .submit {
+  padding-top: 2%;
+}
+
+.form-block .form-wrap .media .social a, .registration-form-block .form-wrap .media .social a {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.form-block .form-wrap .media .remember-me p, .registration-form-block .form-wrap .media .remember-me p {
+  font-size: 0.9em;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.form-block .form-wrap .media .remember-me .button, .registration-form-block .form-wrap .media .remember-me .button {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.form-block .form-wrap .media .remember-me .button:hover, .registration-form-block .form-wrap .media .remember-me .button:hover {
+  cursor: pointer;
+}
+
+.form-block .form-wrap .media .remember-me .button .line, .registration-form-block .form-wrap .media .remember-me .button .line {
+  width: 34px;
+  height: 14px;
+  background: url("../img/login/slide_icon.png");
+}
+
+.form-block .form-wrap .media .remember-me .button .circle, .registration-form-block .form-wrap .media .remember-me .button .circle {
+  width: 24px;
+  height: 24px;
+  background: url("../img/login/slide_circle.png");
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 10;
+  transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .form-wrap .media .remember-me .button .circle.active, .registration-form-block .form-wrap .media .remember-me .button .circle.active {
+  left: 15px;
+  transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .profile-form .avatar-wrap, .registration-form-block .profile-form .avatar-wrap {
+  padding: 20px 0;
+}
+
+.form-block .profile-form .avatar, .registration-form-block .profile-form .avatar {
+  float: left;
+  margin-right: 10px;
+  width: 31px;
+}
+
+.form-block .profile-form .avatar img, .registration-form-block .profile-form .avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.form-block .profile-form .account-title, .registration-form-block .profile-form .account-title {
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  color: #6c6c6c;
+}
+
+.form-block .profile-form .account-title p, .registration-form-block .profile-form .account-title p {
+  margin-bottom: 0;
+}
+
+.form-block .profile-form .refresh-photo .submit-button, .registration-form-block .profile-form .refresh-photo .submit-button {
+  display: block;
+  padding: 10px;
+  background: #2196f3;
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: medium;
+  transition: .2s ease-in;
+  -moz-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  -webkit-transition: .2s ease-in;
+}
+
+.form-block .profile-form .refresh-photo .submit-button:hover, .registration-form-block .profile-form .refresh-photo .submit-button:hover {
+  background: #4faaf3;
+  text-decoration: none;
+  transition: .2s ease-in;
+  -moz-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  -webkit-transition: .2s ease-in;
+}
+
+.form-block .profile-form .links, .registration-form-block .profile-form .links {
+  padding-top: 50px;
+}
+
+.form-block .profile-form .links .link, .registration-form-block .profile-form .links .link {
+  margin-bottom: 10px;
+}
+
+.form-block .profile-form .links .link.active, .registration-form-block .profile-form .links .link.active {
+  background: #f5f5f5;
+}
+
+.form-block .profile-form .links .link a, .registration-form-block .profile-form .links .link a {
+  display: block;
+  padding: 10px 10px 10px 45px;
+  color: #626262;
+  text-align: left;
+}
+
+.form-block .profile-form .links .link a:hover, .form-block .profile-form .links .link a:focus, .registration-form-block .profile-form .links .link a:hover, .registration-form-block .profile-form .links .link a:focus {
+  text-decoration: none;
+}
+
+.form-block .profile-form .links .link.account-settings a, .registration-form-block .profile-form .links .link.account-settings a {
+  background: url("../img/links/settings_icon.png") 15px center no-repeat;
+  background-size: 15px 15px;
+}
+
+.form-block .profile-form .links .link.mail-address a, .registration-form-block .profile-form .links .link.mail-address a {
+  background: url("../img/links/mail_icon.jpg") 15px center no-repeat;
+  background-size: 15px 15px;
+}
+
+.form-block .profile-form .links .link.change-password a, .registration-form-block .profile-form .links .link.change-password a {
+  background: url("../img/links/password_icon.png") 15px center no-repeat;
+  background-size: 15px 15px;
+}
+
+.form-block .profile-form .balance, .registration-form-block .profile-form .balance {
+  background: #f5f5f5;
+  -webkit-box-shadow: 0px 1px 5px 0px #e1e1e1;
+  -moz-box-shadow: 0px 1px 5px 0px #e1e1e1;
+  box-shadow: 0px 1px 5px 0px #e1e1e1;
+  min-height: 140px;
+  margin-top: 40px;
+  padding: 10px 25px;
+}
+
+.form-block .profile-form .balance .balance-title, .registration-form-block .profile-form .balance .balance-title {
+  text-align: left;
+}
+
+.form-block .profile-form .balance .balance-amount, .registration-form-block .profile-form .balance .balance-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #616161;
+}
+
+.form-block .profile-form .balance .balance-add, .registration-form-block .profile-form .balance .balance-add {
+  text-align: center;
+}
+
+.form-block .profile-form .balance .balance-add a, .registration-form-block .profile-form .balance .balance-add a {
+  display: inline-block;
+  padding: 11px 13px;
+  background: #f48120;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 1px 5px 0px #e1e1e1;
+  -moz-box-shadow: 0px 1px 5px 0px #e1e1e1;
+  box-shadow: 0px 1px 5px 0px #e1e1e1;
+  transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .profile-form .balance .balance-add a:hover, .registration-form-block .profile-form .balance .balance-add a:hover {
+  background: #f49229;
+  transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .account-settings-form, .registration-form-block .account-settings-form {
+  text-align: left;
+  display: none;
+}
+
+.form-block .account-settings-form.personal-info-form, .registration-form-block .account-settings-form.personal-info-form {
+  display: block;
+}
+
+.form-block .account-settings-form .settings-title, .registration-form-block .account-settings-form .settings-title {
+  padding-top: 15px;
+  font-size: 1.6em;
+  color: #616161;
+  font-weight: 400;
+}
+
+.form-block .account-settings-form form, .registration-form-block .account-settings-form form {
+  padding-top: 10px;
+}
+
+.form-block .account-settings-form .form-item, .registration-form-block .account-settings-form .form-item {
+  padding-top: 15px;
+}
+
+.form-block .account-settings-form .form-item .form-item-title, .registration-form-block .account-settings-form .form-item .form-item-title {
+  font-size: 1.2em;
+  color: #616161;
+}
+
+.form-block .account-settings-form .form-item .form-item-input input, .registration-form-block .account-settings-form .form-item .form-item-input input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #f5f5f5;
+  background: #f5f5f5;
+  outline: none;
+  color: #aaaaaa;
+}
+
+.form-block .account-settings-form .form-item .form-item-input input:focus, .registration-form-block .account-settings-form .form-item .form-item-input input:focus {
+  background: #fff;
+}
+
+.form-block .account-settings-form .form-item .form-item-input input.submit-button, .registration-form-block .account-settings-form .form-item .form-item-input input.submit-button {
+  display: inline-block;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #2196f3;
+  color: #fff;
+  font-size: 1.2em;
+  transition: .2s ease;
+  -o-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .account-settings-form .form-item .form-item-input input.submit-button:hover, .registration-form-block .account-settings-form .form-item .form-item-input input.submit-button:hover {
+  background: #41a4f3;
+  transition: .2s ease;
+  -o-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .account-settings-form .form-item .form-item-input .select2, .registration-form-block .account-settings-form .form-item .form-item-input .select2 {
+  display: block;
+  width: 100% !important;
+}
+
+.form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection, .registration-form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection {
+  height: auto;
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+  outline: none;
+}
+
+.form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection__arrow, .registration-form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection__arrow {
+  top: 8px;
+}
+
+.form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection__rendered, .registration-form-block .account-settings-form .form-item .form-item-input .select2 .select2-selection__rendered {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.form-block .account-settings-form .form-item .form-item-input .select2-results, .registration-form-block .account-settings-form .form-item .form-item-input .select2-results {
+  background: #f5f5f5;
+}
+
+.form-block .account-settings-form .form-item .buttons .submit-button, .registration-form-block .account-settings-form .form-item .buttons .submit-button {
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: #2196f3;
+  color: #fff;
+  font-size: 0.8em;
+  transition: .2s ease;
+  -o-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}
+
+.form-block .account-settings-form .form-item .buttons .submit-button.delete-button, .registration-form-block .account-settings-form .form-item .buttons .submit-button.delete-button {
+  background: #ff9801;
+}
+
+.form-block .account-settings-form .form-item .buttons .submit-button.delete-button:hover, .registration-form-block .account-settings-form .form-item .buttons .submit-button.delete-button:hover {
+  background: #f9a52a;
+}
+
+.form-block .account-settings-form .form-item .buttons .submit-button:hover, .form-block .account-settings-form .form-item .buttons .submit-button:focus, .registration-form-block .account-settings-form .form-item .buttons .submit-button:hover, .registration-form-block .account-settings-form .form-item .buttons .submit-button:focus {
+  background: #41a4f3;
+  text-decoration: none;
+  transition: .2s ease;
+  -o-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -webkit-transition: .2s ease;
+}

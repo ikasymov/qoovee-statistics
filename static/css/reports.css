@@ -1,0 +1,17 @@
+.input-wrap {
+    text-align: center;
+}
+.input-wrap button {
+    display: inline-block;
+}
+.input-wrapper {
+	
+}
+.input-wrapper input {
+	display: inline-block;
+	width: 190px;
+}
+.input-wrapper button {
+	width: 190px;
+	margin-left: 15px;
+}

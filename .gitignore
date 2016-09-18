@@ -1,0 +1,8 @@
+/virt
+*.pyc
+local.py
+.idea
+/venv/
+media/
+project/.env
+

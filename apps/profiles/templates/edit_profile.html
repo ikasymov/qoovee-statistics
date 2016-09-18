@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block header %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Edit</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+  
+  </head>
+
+  <body>
+
+    <div class="container">
+
+   <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <h2 class="form-signin-heading">Изменить данные профиля</h2>
+        <label for="inputPassword" class="sr-only">Name</label>
+          {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+         <div class="form-item">
+            <div class="form-item-title">Имя</div>
+            <div class="form-item-input">  {{ form.first_name | attr:"class:form-control"| attr:"placeholder:Пример: Николай" }}</div>
+        </div>
+        
+        <label for="inputPassword" class="sr-only">Last Name</label>
+         <div class="form-item">
+            <div class="form-item-title">Фамилия</div>
+            <div class="form-item-input">  {{ form.last_name | attr:"class:form-control"| attr:"placeholder:Пример: Николаев" }}</div>
+        </div>
+        <label for="inputEmail" class="sr-only">Email address</label>
+          <div class="form-item">
+            <div class="form-item-title">Номер телефона</div>
+            <div class="form-item-input">  {{ form.phone| attr:"class:form-control"| attr:"placeholder:Пример: 0551515151" }}</div>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">Фото профиля</div>
+            <div class="form-item-input">  {{ form.photo| attr:"class:form-control"| attr:"placeholder:Пример: 0551515151" }}</div>
+        </div>
+        <div class="form-item">
+            <div class="form-item-title">Пол</div>
+            <div class="form-item-input">  {{ form.sex| attr:"class:form-control"| attr:"placeholder:Пример: 0551515151" }}</div>
+        </div>
+
+         
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Сохранить</button>
+      </form>
+
+    </div> 
+
+  </body>
+</html>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
